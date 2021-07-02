@@ -8,7 +8,7 @@
 
 ​	虚拟DOM其实是用JavaScript对象描述Dom的层级结构，并且Dom中的一切属性都在虚拟Dom中有对应属性。例如：
 
-![image-20210702095748444](D:\VScodeProject\vue源码分析\2、虚拟DOM和diff算法\study-snabbdom\pic\image-20210702095748444.png)
+![image-20210702095748444](.\pic\image-20210702095748444.png)
 
 ### 2、虚拟DOM的作用是什么？
 
@@ -16,7 +16,7 @@
 
 ​	Diff算法可以通过新、老虚拟Dom，对其进行精细化比较，算出如何进行最小量更新，进而反应在真实Dom上。
 
-![image-20210702100325794](D:\VScodeProject\vue源码分析\2、虚拟DOM和diff算法\study-snabbdom\pic\image-20210702100325794.png)
+![image-20210702100325794](.\pic\image-20210702100325794.png)
 
 ​	虚拟Dom属性如下：
 
@@ -35,7 +35,7 @@
 
 ### 3、如何生成虚拟DOM——h()函数
 
-![image-20210702110247727](D:\VScodeProject\vue源码分析\2、虚拟DOM和diff算法\study-snabbdom\pic\image-20210702110247727.png)
+![image-20210702110247727](.\pic\image-20210702110247727.png)
 
 ​	由于h函数的参数可变，所以h函数有多种使用形式。源码中h函数使用了方法的重载，根据不同情况生成不同虚拟DOM
 
@@ -125,5 +125,5 @@ export function vnode(sel, data, children, text, elm) {
 
 ​	注意：当新、老虚拟DOM不一致时，不是直接使用Diff算法，一下是调用patch函数后流程图
 
-![liu_cheng](D:\VScodeProject\vue源码分析\2、虚拟DOM和diff算法\study-snabbdom\pic\liu_cheng.jpg)
+![liu_cheng](.\pic\liu_cheng.jpg)
 
